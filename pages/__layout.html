@@ -1,0 +1,11 @@
+<script src="mystix.js"></script>
+<link rel="stylesheet" type="text/css" href="/global.css">
+
+<script>
+	// import mainnav component
+	$.get("/components/mainnav.html", function(data) {
+    	$(data).prependTo("body");
+	});
+</script>
+
+<div id="page" ></div>

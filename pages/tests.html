@@ -1,0 +1,9 @@
+<h1>Tests</h1>
+<button onclick='mystixFetch("https://jsonplaceholder.typicode.com/todos/1", "GET", false, false);'>GET test vanilla</button>
+
+<script>
+    function onResponse(data){
+        $("#page").append('<p>' + JSON.stringify(data) + '</p>');
+    }
+</script>
+

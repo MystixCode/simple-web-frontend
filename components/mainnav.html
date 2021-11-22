@@ -1,0 +1,83 @@
+<script>
+	var navOpen = false;
+	function toggleBurger() {
+        var xx = document.getElementById("burger");
+        xx.classList.toggle("change");
+	
+	  var x = document.getElementById("links");
+	 
+	  if (x.style.display === "block") {
+		  navOpen = false;
+		x.style.display = "none";
+	  } else {
+		  navOpen=true;
+		x.style.display = "block";
+	  }
+	}
+</script>
+
+
+<div class="mainnav">
+
+	<a id="logo" href="/">Website title</a>
+
+	<div id= "burger" class="burger" onclick="toggleBurger()">
+		<div class="bar1"></div>
+		<div class="bar2"></div>
+		<div class="bar3"></div>
+	</div>
+
+	<div id="links">
+	  <a href="/tests">Tests</a>
+	  <a href="/about">About</a>
+      <a href="/auth/login">Login</a>
+	</div>
+
+</div>
+
+<style>
+	.mainnav {
+	  overflow: hidden;
+	  background-color: #303030;
+	  position: relative;
+	}
+	#logo{
+		background-color: #600080;
+	}
+	.mainnav #links {
+	  display: none;
+	}
+	.mainnav a {
+	  color: white;
+	  padding: 14px 16px;
+	  text-decoration: none;
+	  font-size: 17px;
+	  display: block;
+	}
+	.mainnav a:hover{
+	  background-color: #424242;
+	}
+	.burger {
+		cursor: pointer;
+		display: block;
+		position: absolute;
+		right: 14px;
+		top: 4px;
+	}
+	.bar1, .bar2, .bar3 {
+	width: 35px;
+	height: 5px;
+	background-color: #FFFFFF;
+	margin: 6px 0;
+	transition: 0.4s;
+	}
+	.change .bar1 {
+	-webkit-transform: rotate(-45deg) translate(-9px, 6px);
+	transform: rotate(-45deg) translate(-9px, 6px);
+	}
+	.change .bar2 {opacity: 0;}
+	.change .bar3 {
+	-webkit-transform: rotate(45deg) translate(-8px, -8px);
+	transform: rotate(45deg) translate(-8px, -8px);
+	}
+</style>

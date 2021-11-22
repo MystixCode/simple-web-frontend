@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Website title</title>
+        <script
+			  src="https://code.jquery.com/jquery-3.6.0.min.js"
+			  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+			  crossorigin="anonymous">
+        </script>
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+    <script>
+        if ($("#page").length === 0){
+            //template not loaded --> load template;
+            var page = '/pages/__layout.html';
+            $("body").load(page);
+            //mystixLoad('/pages/__layout.html', 'body');
+        }
+    </script>
+    </body>
+</html> 
